@@ -10,11 +10,11 @@
           class="navbar-item"
           href="/"
         >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
+        Dynamic forms
+        </a>
+        <a class="navbar-item"
+        href="/overview">
+          
         </a>
 
         <div class="navbar-burger">
@@ -63,9 +63,9 @@ export default {
           to: { name: 'index' }
         },
         {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
+          title: 'Elements',
+          icon: 'library',
+          to: { name: 'overview' }
         }
       ]
     }
