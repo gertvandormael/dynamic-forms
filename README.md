@@ -1,5 +1,10 @@
 # dynamic-forms
 
+## Info
+Experimenting with creating dynamic forms (more coming soon)
+
+https://ecstatic-tesla-4eff67.netlify.app/
+
 ## Build Setup
 
 ```bash

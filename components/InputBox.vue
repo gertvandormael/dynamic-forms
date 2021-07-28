@@ -8,6 +8,7 @@
           :value="inputType == 'password' ? 'hunter2' : ''"
           :password-reveal="inputType == 'password' ? true : false"
           :use-html5-validation="inputType =='email' ? true : false"
+          :icon="inputIcon"
         ></b-input>
       </b-field>
     </div>
@@ -29,11 +30,17 @@ export default {
       type: String,
       required: false,
     },
+    inputIcon: {
+      type: String,
+      required: false
+    }
   },
   data() {
     return {
       text: '',
     }
+  },
+  computed: {
   },
   mounted() {
     if (this.inputType == "password") {

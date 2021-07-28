@@ -64,7 +64,7 @@ export default {
         },
         {
           title: 'Elements',
-          icon: 'library',
+          icon: 'question-circle',
           to: { name: 'overview' }
         }
       ]
