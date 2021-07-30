@@ -54,7 +54,22 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'https://cdn.umbraco.io', // Used as fallback if no runtime config is provided
+  },
+  
+  // publicRuntimeConfig: {
+  //   axios: {
+  //     browserBaseURL: process.env.BROWSER_BASE_URL
+  //   }
+  // },
+
+  // privateRuntimeConfig: {
+  //   axios: {
+  //     baseURL: process.env.BASE_URL
+  //   }
+  // },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
