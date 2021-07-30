@@ -29,6 +29,7 @@ export default {
       headers: {
         'Accept-Language': 'en-US',
         'umb-project-alias': 'gerts-versatile-gorilla',
+        'Api-Key': process.env.API_KEY
       },
     }
 
