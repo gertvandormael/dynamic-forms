@@ -2,13 +2,13 @@
   <section class="section">
     <div class="content">
       <h1 class="title is-1">{{ data._embedded.content[0].name }}</h1>
-      <InputBox
-        :input-label="data._embedded.content[0].inputLabel"
-        :input-type="data._embedded.content[0].inputType"
-        :input-status="inputStatus"
+      <InputBox v-for="inputBox in data._embedded.content[0].inputBoxes" :key="inputBox.alias"
+        :input-label="inputBox.inputLabel"
+        :input-type="inputBox.inputType"
+        :input-status="inputStatus(inputBox.inputStatus)"
         :input-icon="
-          data._embedded.content[0].hasInputIcon
-            ? data._embedded.content[0]
+          inputBox.hasInputIcon
+            ? inputBox.inputIcon
             : ''
         "
       />
@@ -39,10 +39,10 @@ export default {
     return { data }
   },
 
-  computed: {
-    inputStatus() {
+  methods: {
+    inputStatus(statusString) {
       let status = ''
-      switch (this.data._embedded.content[0].inputStatus) {
+      switch (statusString) {
         case 'success':
           status = 'is-success'
           break

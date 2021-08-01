@@ -21,10 +21,12 @@ export default {
     inputLabel: {
       type: String,
       required: true,
+      default: "Enter a label in umbraco"
     },
     inputType: {
       type: String,
       required: true,
+      default: "text"
     },
     inputStatus: {
       type: String,
