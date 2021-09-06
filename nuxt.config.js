@@ -57,7 +57,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'https://cdn.umbraco.io', // Used as fallback if no runtime config is provided
+    baseURL: 'https://dynamic-form-api.azurewebsites.net/api', // Used as fallback if no runtime config is provided
   },
   
   publicRuntimeConfig: {

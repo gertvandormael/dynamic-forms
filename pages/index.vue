@@ -1,8 +1,8 @@
 <template>
   <section class="section">
     <div class="content">
-      <h1 class="title is-1">{{ data._embedded.content[0].name }}</h1>
-      <InputBox v-for="inputBox in data._embedded.content[0].inputBoxes" :key="inputBox.alias"
+      <h1 class="title is-1">Dynamic forms</h1>
+      <InputBox v-for="inputBox in data.inputBoxes" :key="inputBox.alias"
         :input-label="inputBox.inputLabel"
         :input-type="inputBox.inputType"
         :input-status="inputStatus(inputBox.inputStatus)"
@@ -27,15 +27,15 @@ export default {
   async asyncData({ $axios }) {
     let config = {
       headers: {
-        'Accept-Language': 'en-US',
-        'umb-project-alias': 'gerts-versatile-gorilla',
+        'Accept-Language': 'en-US'
       },
     }
 
     const data = await $axios.$get(
-      `${$axios.defaults.baseURL}/content`,
+      `${$axios.defaults.baseURL}/form`,
       config
     )
+
     return { data }
   },
 
